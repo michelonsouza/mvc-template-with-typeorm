@@ -5,7 +5,7 @@ import 'express-async-errors';
 
 import './database';
 import routes from './routes';
-import globalExceptionHandler from './app/middlewares/globalExceptionHandler';
+import { globalExceptionHandler } from './app/middlewares';
 
 class App {
   public server: express.Application;

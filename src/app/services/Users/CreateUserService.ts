@@ -2,7 +2,7 @@ import { Repository, getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
 
 import User from '@/app/models/User';
-import AppError from '@/app/middlewares/AppError';
+import { AppError } from '@/app/middlewares';
 import { ICreateUserDTO } from './dtos';
 
 export default class CreateUserService {

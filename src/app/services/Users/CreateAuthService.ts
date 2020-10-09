@@ -3,7 +3,7 @@ import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
 import User from '@/app/models/User';
-import AppError from '@/app/middlewares/AppError';
+import { AppError } from '@/app/middlewares';
 import authConfig from '@/config/auth';
 
 import { ICreateAuthDTO } from './dtos';
