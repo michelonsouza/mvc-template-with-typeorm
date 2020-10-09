@@ -8,7 +8,7 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --no-notify --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "start": "NODE_ENV=production node dist/server.js",
     "prebuild": "ts-node-dev ./src/database/init-ormconfig.ts",
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "seed:create": "yarn typeorm migration:create -c seed -n",
     "seed:run": "yarn typeorm migration:run -c seed",
