@@ -1,0 +1,26 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "docker",
+    "database": "projectdb",
+    "entities": ["./src/app/models/**/*.ts"],
+    "migrations": ["./src/database/migrations/*.ts"],
+    "cli": { "migrationsDir": "./src/database/migrations" }
+  },
+  {
+    "name": "seed",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "docker",
+    "database": "projectdb",
+    "entities": ["./src/app/models/**/*.ts"],
+    "migrations": ["./src/database/seeds/*.ts"],
+    "cli": { "migrationsDir": "./src/database/seeds" }
+  }
+]
